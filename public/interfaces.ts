@@ -1,9 +1,6 @@
 /* eslint-disable */
 
-interface Vehicle {
-	name: string;
-	year: number;
-	broken: boolean;
+interface Reportable {
 	summary(): string;
 }
 
@@ -16,12 +13,17 @@ const oldCivic = {
 	},
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
-	console.log(`
-  name: ${vehicle.name}
-  year: ${vehicle.year}
-  broken: ${vehicle.broken}
-  `);
+const drink = {
+	color: 'clear',
+	carbonated: true,
+	sugar: 45,
+	summary(): string {
+		return `name is ${this.name}`;
+	},
 };
 
-printVehicle(oldCivic);
+const printSummary = (item: Reportable): void => {
+	console.log(item.summary);
+};
+
+printSummary(oldCivic);
