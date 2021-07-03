@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-interface Reportable {
+export interface Reportable {
 	summary(): string;
 }
 
@@ -18,7 +18,7 @@ const drink = {
 	carbonated: true,
 	sugar: 45,
 	summary(): string {
-		return `name is ${this.name}`;
+		return `this has ${this.sugar} grams of sugar`;
 	},
 };
 
