@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
