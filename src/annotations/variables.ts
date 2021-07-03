@@ -24,3 +24,23 @@ export let point: { x: number; y: number } = {
 export const logNumber: (i: number) => void = (i: number) => {
 	console.log(i);
 };
+
+export const json = '{"x": 10, "y": 20}';
+export const coordinates: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates);
+
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean;
+for (const word of words) {
+	if (word === 'green') {
+		foundWord = true;
+		console.log(foundWord);
+	}
+}
+
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+for (const num of numbers) {
+	if (num > 0) numberAboveZero = num;
+	console.log(numberAboveZero);
+}
